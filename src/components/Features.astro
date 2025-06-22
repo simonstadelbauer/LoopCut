@@ -6,7 +6,7 @@ const features = [
     icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>`,
-    color: "text-green-600"
+    color: "text-green-500"
   },
   {
     title: "KI-gestützte Tagesanalyse",
@@ -14,7 +14,7 @@ const features = [
     icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
     </svg>`,
-    color: "text-blue-600"
+    color: "text-blue-500"
   },
   {
     title: "Gezielte Vertiefung",
@@ -22,19 +22,19 @@ const features = [
     icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
     </svg>`,
-    color: "text-purple-600"
+    color: "text-purple-500"
   }
 ];
 ---
 
-<section id="features" class="py-20 bg-white">
+<section id="features" class="py-20 bg-dark-900">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Header -->
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-light-900 mb-4">
         Warum LoopCut?
       </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+      <p class="text-xl text-light-600 max-w-3xl mx-auto">
         Eine App, die sich auf das konzentriert, was wirklich wichtig ist: 
         Deine Gedanken in strukturierte Pläne zu verwandeln.
       </p>
@@ -42,19 +42,19 @@ const features = [
 
     <!-- Features Grid -->
     <div class="grid md:grid-cols-3 gap-8">
-      {features.map((feature, index) => (
+      {features.map((feature) => (
         <div class="text-center group">
-          <div class="bg-gray-50 rounded-2xl p-8 h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="bg-dark-800 rounded-2xl p-8 h-full hover:bg-dark-700 transition-all duration-300 hover:-translate-y-1">
             <!-- Icon -->
-            <div class={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-6 group-hover:bg-primary-50 transition-colors duration-300 ${feature.color}`}>
+            <div class={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-dark-700 group-hover:bg-dark-600 mb-6 transition-colors duration-300 ${feature.color}`}>
               <Fragment set:html={feature.icon} />
             </div>
             
             <!-- Content -->
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            <h3 class="text-xl font-semibold text-light-900 mb-4">
               {feature.title}
             </h3>
-            <p class="text-gray-600 leading-relaxed">
+            <p class="text-light-600 leading-relaxed">
               {feature.description}
             </p>
           </div>
@@ -63,31 +63,31 @@ const features = [
     </div>
 
     <!-- Additional Benefits -->
-    <div class="mt-20 bg-gray-50 rounded-2xl p-8 md:p-12">
+    <div class="mt-20 bg-dark-800 rounded-2xl p-8 md:p-12">
       <div class="grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          <h3 class="text-2xl font-bold text-light-900 mb-4">
             Keine Streaks. Keine Gamification.
           </h3>
-          <p class="text-gray-600 mb-6 leading-relaxed">
+          <p class="text-light-600 mb-6 leading-relaxed">
             LoopCut verzichtet bewusst auf spielerische Elemente und Streaks. 
             Stattdessen konzentrieren wir uns auf echte Ergebnisse und nachhaltige 
             Verhaltensänderungen durch klare Struktur und KI-gestützte Reflexion.
           </p>
           <ul class="space-y-3">
-            <li class="flex items-center text-gray-700">
+            <li class="flex items-center text-light-700">
               <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
               </svg>
               Fokus auf echte Ergebnisse statt virtuelle Belohnungen
             </li>
-            <li class="flex items-center text-gray-700">
+            <li class="flex items-center text-light-700">
               <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
               </svg>
               Nachhaltige Verhaltensänderungen durch Reflexion
             </li>
-            <li class="flex items-center text-gray-700">
+            <li class="flex items-center text-light-700">
               <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
               </svg>
@@ -99,26 +99,26 @@ const features = [
         <div class="flex justify-center">
           <div class="relative">
             <!-- Simple App Interface Mockup -->
-            <div class="w-64 h-96 bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
+            <div class="w-64 h-96 bg-dark-900 rounded-2xl shadow-lg border border-dark-700 p-6">
               <div class="text-center mb-6">
-                <h4 class="text-lg font-semibold text-gray-800">LoopCut</h4>
-                <p class="text-sm text-gray-500">Heute, 15. März</p>
+                <h4 class="text-lg font-semibold text-light-800">LoopCut</h4>
+                <p class="text-sm text-light-600">Heute, 15. März</p>
               </div>
               
               <div class="space-y-4">
-                <div class="bg-gray-50 rounded-lg p-3">
-                  <p class="text-sm text-gray-600">"Ich sollte mehr Zeit für..."</p>
+                <div class="bg-dark-800 rounded-lg p-3">
+                  <p class="text-sm text-light-600">"Ich sollte mehr Zeit für..."</p>
                 </div>
-                <div class="bg-gray-50 rounded-lg p-3">
-                  <p class="text-sm text-gray-600">"Morgen möchte ich..."</p>
+                <div class="bg-dark-800 rounded-lg p-3">
+                  <p class="text-sm text-light-600">"Morgen möchte ich..."</p>
                 </div>
-                <div class="bg-primary-50 rounded-lg p-3 border border-primary-200">
-                  <p class="text-sm text-primary-700 font-medium">KI-Analyse bereit</p>
+                <div class="bg-dark-700 rounded-lg p-3 border border-dark-600">
+                  <p class="text-sm text-light-700 font-medium">KI-Analyse bereit</p>
                 </div>
               </div>
               
               <div class="absolute bottom-4 left-4 right-4">
-                <div class="bg-primary-600 text-white text-center py-2 rounded-lg text-sm font-medium">
+                <div class="bg-light-900 text-dark-900 text-center py-2 rounded-lg text-sm font-medium">
                   Tagesanalyse starten
                 </div>
               </div>

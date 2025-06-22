@@ -1,19 +1,19 @@
 ---
+import AppStoreButton from './AppStoreButton.astro';
 const navItems = [
   { href: '#home', label: 'Home' },
   { href: '#features', label: 'Features' },
   { href: '#how-it-works', label: 'So funktioniert\'s' },
-  { href: '#download', label: 'Download' },
-  { href: '#contact', label: 'Kontakt' }
+  { href: '#download', label: 'Download' }
 ];
 ---
 
-<header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+<header class="fixed top-0 left-0 right-0 bg-dark-900/80 backdrop-blur-sm border-b border-dark-700 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
       <div class="flex items-center">
-        <a href="#home" class="text-2xl font-bold text-primary-600">
+        <a href="#home" class="text-2xl font-bold text-light-900">
           LoopCut
         </a>
       </div>
@@ -23,7 +23,7 @@ const navItems = [
         {navItems.map((item) => (
           <a
             href={item.href}
-            class="text-gray-600 hover:text-primary-600 transition-colors duration-200 font-medium"
+            class="text-light-600 hover:text-light-900 transition-colors duration-200 font-medium"
           >
             {item.label}
           </a>
@@ -32,19 +32,14 @@ const navItems = [
 
       <!-- CTA Button -->
       <div class="hidden md:block">
-        <a
-          href="#download"
-          class="bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200"
-        >
-          Jetzt herunterladen
-        </a>
+        <AppStoreButton />
       </div>
 
       <!-- Mobile menu button -->
       <div class="md:hidden">
         <button
           type="button"
-          class="text-gray-600 hover:text-primary-600"
+          class="text-light-600 hover:text-light-900"
           id="mobile-menu-button"
         >
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,21 +51,18 @@ const navItems = [
 
     <!-- Mobile Navigation -->
     <div class="md:hidden hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1 border-t border-gray-200">
+      <div class="px-2 pt-2 pb-3 space-y-1 border-t border-dark-700">
         {navItems.map((item) => (
           <a
             href={item.href}
-            class="block px-3 py-2 text-gray-600 hover:text-primary-600 transition-colors duration-200 font-medium"
+            class="block px-3 py-2 text-light-600 hover:text-light-900 transition-colors duration-200 font-medium"
           >
             {item.label}
           </a>
         ))}
-        <a
-          href="#download"
-          class="block px-3 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200 mt-4"
-        >
-          Jetzt herunterladen
-        </a>
+        <div class="mt-4 px-3">
+          <AppStoreButton />
+        </div>
       </div>
     </div>
   </div>

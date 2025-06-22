@@ -4,6 +4,19 @@ export default {
   theme: {
     extend: {
       colors: {
+        dark: {
+          900: '#000000', // Black
+          800: '#1C1C1E', // Surface
+          700: '#2C2C2E', // Lighter Surface
+          600: '#3A3A3C',
+        },
+        light: {
+          900: '#FFFFFF', // White
+          800: '#F2F2F7', // Off-white
+          700: '#E5E5EA',
+          600: '#AEAEB2', // Muted text
+          500: '#8E8E93',
+        },
         primary: {
           50: '#f0f9ff',
           100: '#e0f2fe',
