@@ -1,0 +1,127 @@
+---
+// Hero section component
+---
+
+<section id="home" class="pt-24 pb-16 bg-gradient-to-b from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+      <!-- Content -->
+      <div class="text-center lg:text-left">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+          Deine Gedanken.
+          <span class="text-primary-600 block">Dein Plan.</span>
+          <span class="text-gray-700">Ein Screen.</span>
+        </h1>
+        
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          Die iOS App, die deine täglichen Gedanken in klare Zukunftspläne verwandelt. 
+          Einfach. Fokussiert. Effektiv.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a
+            href="#download"
+            class="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
+            Jetzt herunterladen
+          </a>
+          <a
+            href="#how-it-works"
+            class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-primary-600 hover:text-primary-600 transition-colors duration-200"
+          >
+            Mehr erfahren
+          </a>
+        </div>
+        
+        <div class="mt-8 flex items-center justify-center lg:justify-start space-x-6 text-sm text-gray-500">
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            KI-gestützt
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            Einfach & fokussiert
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            Datenschutz-konform
+          </div>
+        </div>
+      </div>
+      
+      <!-- App Mockup -->
+      <div class="mt-12 lg:mt-0 flex justify-center">
+        <div class="relative">
+          <!-- Phone Frame -->
+          <div class="w-80 h-[600px] bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
+            <div class="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+              <!-- Status Bar -->
+              <div class="h-8 bg-gray-100 flex items-center justify-between px-6 text-xs text-gray-600">
+                <span>9:41</span>
+                <div class="flex items-center space-x-1">
+                  <div class="w-4 h-2 bg-gray-600 rounded-sm"></div>
+                  <div class="w-1 h-2 bg-gray-600 rounded-sm"></div>
+                  <div class="w-1 h-2 bg-gray-600 rounded-sm"></div>
+                </div>
+              </div>
+              
+              <!-- App Content -->
+              <div class="p-6 h-full bg-gradient-to-b from-blue-50 to-white">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-2">LoopCut</h2>
+                  <p class="text-gray-600">Dein täglicher Begleiter</p>
+                </div>
+                
+                <!-- Main Content Area -->
+                <div class="space-y-4">
+                  <!-- Journal Entry -->
+                  <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-gray-800 mb-2">Heute</h3>
+                    <p class="text-gray-600 text-sm">Deine Gedanken werden hier gesammelt...</p>
+                  </div>
+                  
+                  <!-- Goals -->
+                  <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-gray-800 mb-2">Ziele</h3>
+                    <p class="text-gray-600 text-sm">Klare Zukunftspläne...</p>
+                  </div>
+                  
+                  <!-- AI Insights -->
+                  <div class="bg-primary-50 rounded-lg p-4 border border-primary-200">
+                    <h3 class="font-semibold text-primary-800 mb-2">KI-Insights</h3>
+                    <p class="text-primary-700 text-sm">Tägliche Analyse & Pläne...</p>
+                  </div>
+                </div>
+                
+                <!-- Bottom Navigation -->
+                <div class="absolute bottom-4 left-4 right-4">
+                  <div class="bg-white rounded-full p-2 shadow-lg border border-gray-200">
+                    <div class="flex justify-center">
+                      <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                          <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Decorative Elements -->
+          <div class="absolute -top-4 -right-4 w-8 h-8 bg-primary-200 rounded-full opacity-50"></div>
+          <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-primary-300 rounded-full opacity-50"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
