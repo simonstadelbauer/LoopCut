@@ -3,7 +3,8 @@ import AppStoreButton from './AppStoreButton.astro';
 const navItems = [
   { href: '#home', label: 'Home' },
   { href: '#features', label: 'Features' },
-  { href: '#how-it-works', label: 'So funktioniert\'s' }
+  { href: '#how-it-works', label: 'So funktioniert\'s' },
+  { href: '#faq', label: 'FAQ' }
 ];
 ---
 
@@ -34,13 +35,7 @@ const navItems = [
 
       <!-- CTA Button -->
       <div class="hidden md:block">
-        <a 
-          href="#" 
-          class="inline-flex items-center justify-center px-4 py-2 bg-light-900 text-dark-900 rounded-lg font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-glow-subtle"
-        >
-          <img src="/Apple_logo_black.svg" alt="Apple Logo" class="w-4 h-4 mr-2" />
-          App Store
-        </a>
+        <AppStoreButton size="small" />
       </div>
 
       <!-- Mobile menu button -->
@@ -49,9 +44,14 @@ const navItems = [
           type="button"
           class="text-light-600 hover:text-light-900 p-2 rounded-lg hover:bg-dark-700/50 transition-all duration-300"
           id="mobile-menu-button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
         >
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="h-6 w-6" id="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="h-6 w-6 hidden" id="close-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
@@ -63,19 +63,13 @@ const navItems = [
         {navItems.map((item) => (
           <a
             href={item.href}
-            class="block px-4 py-3 text-light-600 hover:text-light-900 hover:bg-dark-700/50 transition-all duration-300 font-medium rounded-lg"
+            class="block px-4 py-3 text-light-600 hover:text-light-900 hover:bg-dark-700/50 transition-all duration-300 font-medium rounded-lg mobile-nav-link"
           >
             {item.label}
           </a>
         ))}
         <div class="mt-4 px-4">
-          <a 
-            href="#" 
-            class="inline-flex items-center justify-center px-4 py-2 bg-light-900 text-dark-900 rounded-lg font-medium text-sm w-full"
-          >
-            <img src="/Apple_logo_black.svg" alt="Apple Logo" class="w-4 h-4 mr-2" />
-            App Store
-          </a>
+          <AppStoreButton size="small" />
         </div>
       </div>
     </div>
@@ -84,12 +78,50 @@ const navItems = [
 
 <script>
   // Mobile menu toggle
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-  if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  }
+    if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+      mobileMenuButton.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          menuIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+          mobileMenuButton.setAttribute('aria-expanded', 'true');
+        } else {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Close mobile menu when clicking on a nav link
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        if (!mobileMenuButton.contains(target) && !mobileMenu.contains(target)) {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  });
 </script> 

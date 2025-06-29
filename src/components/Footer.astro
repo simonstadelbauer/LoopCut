@@ -3,134 +3,91 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-gradient-to-b from-dark-800 to-dark-900 border-t border-dark-700/50 relative">
-  <!-- Background decoration -->
-  <div class="absolute inset-0">
-    <div class="absolute top-0 left-1/4 w-64 h-64 bg-accent-orange/5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 right-1/4 w-48 h-48 bg-accent-blue/5 rounded-full blur-3xl"></div>
-  </div>
-
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="grid md:grid-cols-4 gap-8 lg:gap-12">
-      <!-- Brand Section -->
-      <div class="md:col-span-2 animate-slide-up">
+<footer class="bg-dark-900 border-t border-dark-700/50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Brand Column -->
+      <div class="md:col-span-1">
         <div class="flex items-center space-x-3 mb-6">
-          <div class="relative">
-            <img src="/logo-white.png" alt="LoopCut Logo" class="h-10 w-auto" />
-          </div>
-          <span class="text-2xl font-bold text-light-900 tracking-tight">LoopCut</span>
+          <img src="/logo-white.png" alt="LoopCut Logo" class="w-8 h-8" />
+          <span class="hidden sm:block text-xl font-bold text-light-900">LoopCut</span>
         </div>
-        
-        <p class="text-light-600 mb-6 leading-relaxed max-w-md">
+        <p class="text-light-600 leading-relaxed mb-6">
           Verwandle deine täglichen Gedanken in strukturierte Zukunftspläne. 
-          <span class="text-accent-orange font-medium">Eine App, ein Bildschirm, unendliche Klarheit.</span>
+          <span class="text-light-500 font-medium">Eine App, ein Bildschirm, unendliche Klarheit.</span>
         </p>
         
-        <!-- Social Links -->
-        <div class="flex space-x-4">
-          <a href="#" class="group w-10 h-10 bg-dark-700/50 hover:bg-accent-orange/20 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110">
-            <span class="text-light-600 group-hover:text-accent-orange transition-colors duration-300">📧</span>
-          </a>
-          <a href="#" class="group w-10 h-10 bg-dark-700/50 hover:bg-accent-blue/20 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110">
-            <span class="text-light-600 group-hover:text-accent-blue transition-colors duration-300">🐦</span>
-          </a>
-          <a href="#" class="group w-10 h-10 bg-dark-700/50 hover:bg-accent-gray/20 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110">
-            <span class="text-light-600 group-hover:text-accent-gray transition-colors duration-300">💼</span>
-          </a>
+        <!-- Version Badge -->
+        <div class="inline-flex items-center px-3 py-1 bg-dark-700/50 border border-dark-600/50 rounded-full text-xs text-light-700 backdrop-blur-sm">
+          <span class="w-2 h-2 bg-light-700 rounded-full mr-2 animate-pulse"></span>
+          Version 1.0
         </div>
       </div>
-      
-      <!-- Quick Links -->
-      <div class="animate-slide-up" style="animation-delay: 0.1s;">
-        <h4 class="text-light-900 font-semibold mb-6 text-lg">
-          <span class="bg-gradient-to-r from-accent-orange to-accent-blue bg-clip-text text-transparent">
-            Navigation
-          </span>
-        </h4>
-        <ul class="space-y-3">
-          <li>
-            <a href="#home" class="text-light-600 hover:text-accent-orange transition-colors duration-300 flex items-center group">
-              <span class="w-1 h-1 bg-accent-orange rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#features" class="text-light-600 hover:text-accent-blue transition-colors duration-300 flex items-center group">
-              <span class="w-1 h-1 bg-accent-blue rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              Features
-            </a>
-          </li>
-          <li>
-            <a href="#how-it-works" class="text-light-600 hover:text-accent-orange transition-colors duration-300 flex items-center group">
-              <span class="w-1 h-1 bg-accent-orange rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              So funktioniert's
-            </a>
-          </li>
-          <li>
-            <a href="#download" class="text-light-600 hover:text-accent-blue transition-colors duration-300 flex items-center group">
-              <span class="w-1 h-1 bg-accent-blue rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              Download
-            </a>
-          </li>
+
+      <!-- Navigation Column -->
+      <div class="text-center md:text-left">
+        <h3 class="text-light-900 font-semibold mb-4">Navigation</h3>
+        <ul class="space-y-3 text-center md:text-left">
+          <li><a href="#home" class="text-light-600 hover:text-light-500 transition-colors duration-300">Home</a></li>
+          <li><a href="#features" class="text-light-600 hover:text-light-500 transition-colors duration-300">Features</a></li>
+          <li><a href="#how-it-works" class="text-light-600 hover:text-light-500 transition-colors duration-300">So funktioniert's</a></li>
+          <li><a href="#faq" class="text-light-600 hover:text-light-500 transition-colors duration-300">FAQ</a></li>
+          <li><a href="#download" class="text-light-600 hover:text-light-500 transition-colors duration-300">Download</a></li>
         </ul>
       </div>
-      
-      <!-- Legal Links -->
-      <div class="animate-slide-up" style="animation-delay: 0.2s;">
-        <h4 class="text-light-900 font-semibold mb-6 text-lg">
-          <span class="bg-gradient-to-r from-accent-blue to-accent-orange bg-clip-text text-transparent">
-            Rechtliches
-          </span>
-        </h4>
-        <ul class="space-y-3">
-          <li>
-            <a href="#" class="text-light-600 hover:text-accent-orange transition-colors duration-300 flex items-center group">
-              <span class="w-1 h-1 bg-accent-orange rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              Datenschutz
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-light-600 hover:text-accent-blue transition-colors duration-300 flex items-center group">
-              <span class="w-1 h-1 bg-accent-blue rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              Nutzungsbedingungen
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-light-600 hover:text-accent-orange transition-colors duration-300 flex items-center group">
-              <span class="w-1 h-1 bg-accent-orange rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              Impressum
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-light-600 hover:text-accent-blue transition-colors duration-300 flex items-center group">
-              <span class="w-1 h-1 bg-accent-blue rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              Kontakt
-            </a>
-          </li>
+
+      <!-- Legal Column -->
+      <div class="text-center md:text-left">
+        <h3 class="text-light-900 font-semibold mb-4">Rechtliches</h3>
+        <ul class="space-y-3 text-center md:text-left">
+          <li><a href="/datenschutz" class="text-light-600 hover:text-light-500 transition-colors duration-300">Datenschutz</a></li>
+          <li><a href="/nutzungsbedingungen" class="text-light-600 hover:text-light-500 transition-colors duration-300">Nutzungsbedingungen</a></li>
+          <li><a href="/impressum" class="text-light-600 hover:text-light-500 transition-colors duration-300">Impressum</a></li>
+          <li><a href="/kontakt" class="text-light-600 hover:text-light-500 transition-colors duration-300">Kontakt</a></li>
         </ul>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="text-center md:text-left">
+        <h3 class="text-light-900 font-semibold mb-4">Kontakt</h3>
+        <div class="space-y-3 text-center md:text-left">
+          <p class="text-light-600">
+            <span class="block">support@loopcut.app</span>
+          </p>
+          <p class="text-light-600">
+            <span class="block">Feedback willkommen</span>
+          </p>
+          <p class="text-light-600">
+            <span class="block">Made with ❤️ in Germany</span>
+          </p>
+        </div>
       </div>
     </div>
-    
-    <!-- Bottom Bar -->
-    <div class="mt-16 pt-8 border-t border-dark-700/50 animate-slide-up" style="animation-delay: 0.3s;">
+
+    <!-- Bottom Section -->
+    <div class="border-t border-dark-700/50 mt-12 pt-8 text-center">
       <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-        <div class="flex items-center space-x-6">
-          <p class="text-light-600 text-sm">
-            © {currentYear} LoopCut. Alle Rechte vorbehalten.
-          </p>
-          <div class="hidden md:flex items-center space-x-2">
-            <span class="w-8 h-px bg-gradient-to-r from-transparent via-accent-orange/30 to-transparent"></span>
-            <span class="text-xs text-light-700 font-medium">Made with ❤️ in Germany</span>
-            <span class="w-8 h-px bg-gradient-to-r from-transparent via-accent-orange/30 to-transparent"></span>
-          </div>
-        </div>
+        <p class="text-light-600 text-sm">
+          © 2024 LoopCut. Alle Rechte vorbehalten.
+        </p>
         
-        <!-- Version Info -->
-        <div class="flex items-center space-x-4 text-xs text-light-600">
-          <span class="px-2 py-1 bg-dark-700/50 rounded-full">v1.0.0</span>
-          <span class="px-2 py-1 bg-gradient-to-r from-accent-orange/20 to-accent-blue/20 text-accent-orange rounded-full border border-accent-orange/30">
-            ✨ Neu im App Store
-          </span>
+        <div class="flex items-center space-x-6">
+          <span class="text-light-700 text-sm">Folge uns:</span>
+          <div class="flex space-x-4">
+            <a href="mailto:support@loopcut.app" class="text-light-600 hover:text-light-500 transition-colors duration-300" title="E-Mail">
+              <span class="sr-only">E-Mail</span>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+              </svg>
+            </a>
+            <a href="https://apps.apple.com/app/loopcut" class="text-light-600 hover:text-light-500 transition-colors duration-300" title="App Store">
+              <span class="sr-only">App Store</span>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13.2 3.2c-.4-.4-.9-.7-1.5-.7s-1.1.3-1.5.7L3.5 9.9c-.4.4-.7.9-.7 1.5s.3 1.1.7 1.5l6.7 6.7c.4.4.9.7 1.5.7s1.1-.3 1.5-.7l6.7-6.7c.4-.4.7-.9.7-1.5s-.3-1.1-.7-1.5L13.2 3.2zM12 14H8v-4h4v4z"></path>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>

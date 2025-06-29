@@ -1,0 +1,128 @@
+---
+const faqs = [
+  {
+    question: 'Wie funktioniert die KI-Analyse?',
+    answer: 'Jeden Abend analysiert unsere KI deine Tageseinträge und identifiziert wiederkehrende Muster, Prioritäten und Handlungsfelder. Basierend auf bewährten psychologischen Methoden erstellt sie dann konkrete, personalisierte Aktionspläne für deine Weiterentwicklung.'
+  },
+  {
+    question: 'Sind meine Daten sicher?',
+    answer: 'Absolut. Alle deine Gedanken und Einträge werden verschlüsselt auf deinem Gerät gespeichert. Wir haben keinen Zugriff auf deine persönlichen Inhalte. Die KI-Verarbeitung erfolgt lokal oder über sichere, verschlüsselte Verbindungen.'
+  },
+  {
+    question: 'Kostet die App etwas?',
+    answer: 'LoopCut ist kostenlos herunterladbar und nutzbar. Alle Kernfunktionen - Journal, KI-Analyse und CBT-Gespräche - sind ohne zusätzliche Kosten verfügbar. Keine versteckten Gebühren, keine Werbung.'
+  },
+  {
+    question: 'Was sind CBT-Gespräche?',
+    answer: 'CBT steht für Cognitive Behavioral Therapy (Kognitive Verhaltenstherapie). Unsere KI führt strukturierte Gespräche nach diesen bewährten therapeutischen Prinzipien, um dir zu helfen, negative Gedankenmuster zu erkennen und positive Veränderungen zu entwickeln.'
+  },
+  {
+    question: 'Brauche ich eine Internetverbindung?',
+    answer: 'Für die Grundfunktionen wie das Journal brauchst du keine Internetverbindung. Die KI-Analyse und CBT-Gespräche benötigen eine Verbindung, um die bestmöglichen Ergebnisse zu liefern. Deine Daten bleiben dabei jederzeit sicher.'
+  },
+  {
+    question: 'Wie oft sollte ich die App nutzen?',
+    answer: 'Es gibt keine festen Regeln. Viele Nutzer schreiben täglich ihre Gedanken auf und lassen diese abends analysieren. Du kannst die App aber ganz nach deinem Rhythmus nutzen - täglich, wöchentlich oder wann immer du Klarheit brauchst.'
+  }
+];
+---
+
+<section id="faq" class="py-24 bg-dark-900 relative">
+  <!-- Background -->
+  <div class="absolute inset-0">
+    <div class="absolute top-1/3 left-1/3 w-72 h-72 bg-light-900/2 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/3 right-1/3 w-64 h-64 bg-light-900/1 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16 animate-slide-up">
+      <div class="mb-4">
+        <span class="inline-block px-4 py-2 bg-dark-700/50 text-light-700 border border-dark-600/50 rounded-full text-sm font-medium backdrop-blur-sm">
+          ❓ Häufige Fragen
+        </span>
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-light-900 mb-6">
+        <span class="text-light-900">
+          Alles was du
+        </span>
+        <br>
+        <span class="text-light-600">wissen musst</span>
+      </h2>
+      <p class="text-xl text-light-600 max-w-3xl mx-auto leading-relaxed">
+        Hier findest du Antworten auf die wichtigsten Fragen zu LoopCut.
+      </p>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="space-y-6">
+      {faqs.map((faq, index) => (
+        <div 
+          class="group animate-slide-up"
+          style={`animation-delay: ${index * 0.1}s;`}
+        >
+          <details class="bg-dark-800/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl hover:border-light-700/30 transition-all duration-300">
+            <summary class="flex items-center justify-between p-6 cursor-pointer group-hover:bg-dark-700/30 rounded-2xl transition-all duration-300">
+              <h3 class="text-lg font-semibold text-light-900 pr-4">
+                {faq.question}
+              </h3>
+              <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-dark-600/50 rounded-full flex items-center justify-center group-hover:bg-light-900/10 transition-all duration-300">
+                  <svg class="w-4 h-4 text-light-600 transform transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                  </svg>
+                </div>
+              </div>
+            </summary>
+            <div class="px-6 pb-6">
+              <div class="border-t border-dark-600/30 pt-4">
+                <p class="text-light-600 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="mt-16 text-center animate-slide-up" style="animation-delay: 0.8s;">
+      <div class="bg-gradient-to-r from-dark-800/50 to-dark-700/50 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-light-900 mb-4">
+          <span class="text-light-900">
+            Weitere Fragen?
+          </span>
+        </h3>
+        <p class="text-light-600 mb-6 max-w-xl mx-auto">
+          Wir helfen gerne weiter! Schreib uns einfach eine E-Mail oder probiere die App direkt aus.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="mailto:support@loopcut.app" 
+            class="group relative px-8 py-4 bg-transparent border-2 border-dark-600/50 text-light-700 rounded-xl font-semibold hover:border-light-700/50 hover:text-light-600 transition-all duration-300"
+          >
+            <span class="relative z-10">Kontakt aufnehmen</span>
+          </a>
+          <button class="group relative px-8 py-4 bg-light-900 text-dark-900 rounded-xl font-semibold hover:bg-light-800 transition-all duration-300 hover:scale-105">
+            <span class="relative z-10">App ausprobieren</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  details[open] summary svg {
+    transform: rotate(45deg);
+  }
+  
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details summary::marker {
+    display: none;
+  }
+</style> 

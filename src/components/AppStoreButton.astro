@@ -1,14 +1,40 @@
 ---
 // App Store Button Component
+const { size = 'medium' } = Astro.props;
+
+const sizeClasses = {
+  small: {
+    container: 'px-4 py-2 text-sm',
+    logo: 'w-4 h-4 mr-2',
+    text: 'text-xs',
+    title: 'text-sm font-semibold'
+  },
+  medium: {
+    container: 'px-6 py-3 text-base',
+    logo: 'w-5 h-5 mr-3',
+    text: 'text-xs',
+    title: 'text-base font-bold'
+  },
+  large: {
+    container: 'px-8 py-4 text-lg',
+    logo: 'w-6 h-6 mr-3',
+    text: 'text-sm',
+    title: 'text-lg font-bold'
+  }
+};
+
+const classes = sizeClasses[size] || sizeClasses.medium;
 ---
 
 <a 
-  href="#" 
-  class="group inline-flex items-center justify-center px-6 py-3 bg-light-900 text-dark-900 rounded-xl font-semibold text-base transition-all duration-300 hover:scale-105 hover:shadow-glow-white"
+  href="https://apps.apple.com/app/loopcut" 
+  target="_blank"
+  rel="noopener noreferrer"
+  class={`group inline-flex items-center justify-center ${classes.container} bg-light-900 text-dark-900 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-glow-white`}
 >
-  <img src="/Apple_logo_black.svg" alt="Apple Logo" class="w-5 h-5 mr-3" />
+  <img src="/Apple_logo_black.svg" alt="Apple Logo" class={classes.logo} />
   <div class="flex flex-col items-start">
-    <span class="text-xs text-dark-600 leading-none">Laden im</span>
-    <span class="text-base font-bold leading-tight">App Store</span>
+    <span class={`${classes.text} text-dark-600 leading-none`}>Laden im</span>
+    <span class={`${classes.title} leading-tight`}>App Store</span>
   </div>
 </a> 

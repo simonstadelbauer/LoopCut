@@ -41,6 +41,7 @@ export default {
         'slide-in-right': 'slideInRight 0.8s ease-out',
         'pulse-slow': 'pulse 4s infinite',
         'float': 'float 6s ease-in-out infinite',
+        'bounce-subtle': 'bounceSubtle 2s infinite',
       },
       keyframes: {
         fadeIn: {
@@ -63,6 +64,10 @@ export default {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+        bounceSubtle: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-5px)' },
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -81,7 +86,15 @@ export default {
       boxShadow: {
         'glow-subtle': '0 0 20px rgba(255, 255, 255, 0.1)',
         'glow-white': '0 0 30px rgba(255, 255, 255, 0.15)',
-      }
+        'inner-glow': 'inset 0 0 20px rgba(255, 255, 255, 0.05)',
+      },
+      transitionTimingFunction: {
+        'bounce-in': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+      screens: {
+        'xs': '475px',
+      },
     },
   },
   plugins: [],
