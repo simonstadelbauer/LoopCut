@@ -3,19 +3,20 @@ import AppStoreButton from './AppStoreButton.astro';
 const navItems = [
   { href: '#home', label: 'Home' },
   { href: '#features', label: 'Features' },
-  { href: '#how-it-works', label: 'So funktioniert\'s' },
-  { href: '#download', label: 'Download' }
+  { href: '#how-it-works', label: 'So funktioniert\'s' }
 ];
 ---
 
-<header class="fixed top-0 left-0 right-0 bg-dark-900/80 backdrop-blur-sm border-b border-dark-700 z-50">
+<header class="fixed top-0 left-0 right-0 bg-dark-900/95 backdrop-blur-md border-b border-dark-700/50 z-50 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
       <div class="flex items-center">
-        <a href="#home" class="flex items-center space-x-3">
-          <img src="/logo-white.png" alt="LoopCut Logo" class="h-8 w-auto" />
-          <span class="hidden md:inline text-2xl font-bold text-light-900">LoopCut</span>
+        <a href="#home" class="flex items-center space-x-3 group">
+          <div class="relative">
+            <img src="/logo-white.png" alt="LoopCut Logo" class="h-8 w-auto transition-transform duration-300 group-hover:scale-105" />
+          </div>
+          <span class="hidden md:inline text-xl font-bold text-light-900 tracking-tight">LoopCut</span>
         </a>
       </div>
 
@@ -24,7 +25,7 @@ const navItems = [
         {navItems.map((item) => (
           <a
             href={item.href}
-            class="text-light-600 hover:text-light-900 transition-colors duration-200 font-medium"
+            class="text-light-600 hover:text-light-900 transition-colors duration-300 font-medium"
           >
             {item.label}
           </a>
@@ -33,14 +34,20 @@ const navItems = [
 
       <!-- CTA Button -->
       <div class="hidden md:block">
-        <AppStoreButton />
+        <a 
+          href="#" 
+          class="inline-flex items-center justify-center px-4 py-2 bg-gradient-orange text-white rounded-lg font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-glow-orange"
+        >
+          <img src="/Apple_logo_black.svg" alt="Apple Logo" class="w-4 h-4 mr-2 invert" />
+          App Store
+        </a>
       </div>
 
       <!-- Mobile menu button -->
       <div class="md:hidden">
         <button
           type="button"
-          class="text-light-600 hover:text-light-900"
+          class="text-light-600 hover:text-light-900 p-2 rounded-lg hover:bg-dark-700/50 transition-all duration-300"
           id="mobile-menu-button"
         >
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -52,17 +59,23 @@ const navItems = [
 
     <!-- Mobile Navigation -->
     <div class="md:hidden hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1 border-t border-dark-700">
+      <div class="px-2 pt-2 pb-3 space-y-1 border-t border-dark-700/50 bg-dark-800/95 backdrop-blur-md rounded-b-xl">
         {navItems.map((item) => (
           <a
             href={item.href}
-            class="block px-3 py-2 text-light-600 hover:text-light-900 transition-colors duration-200 font-medium"
+            class="block px-4 py-3 text-light-600 hover:text-light-900 hover:bg-dark-700/50 transition-all duration-300 font-medium rounded-lg"
           >
             {item.label}
           </a>
         ))}
-        <div class="mt-4 px-3">
-          <AppStoreButton />
+        <div class="mt-4 px-4">
+          <a 
+            href="#" 
+            class="inline-flex items-center justify-center px-4 py-2 bg-gradient-orange text-white rounded-lg font-medium text-sm w-full"
+          >
+            <img src="/Apple_logo_black.svg" alt="Apple Logo" class="w-4 h-4 mr-2 invert" />
+            App Store
+          </a>
         </div>
       </div>
     </div>
