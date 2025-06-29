@@ -6,10 +6,10 @@ import AppStoreButton from './AppStoreButton.astro';
   <!-- Clean Background -->
   <div class="absolute inset-0 bg-gradient-hero"></div>
   
-  <!-- Subtle accent orbs -->
+  <!-- Very subtle accent orbs -->
   <div class="absolute inset-0">
-    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-accent-orange/5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent-blue/5 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-light-900/3 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-48 h-48 bg-light-900/2 rounded-full blur-3xl"></div>
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
@@ -17,43 +17,43 @@ import AppStoreButton from './AppStoreButton.astro';
       <!-- Left Column - Content -->
       <div class="text-center lg:text-left animate-slide-in-left">
         <div class="mb-6">
-          <span class="inline-block px-4 py-2 bg-accent-orange/10 text-accent-orange border border-accent-orange/30 rounded-full text-sm font-medium backdrop-blur-sm">
+          <span class="inline-block px-4 py-2 bg-dark-700/50 text-light-700 border border-dark-600/50 rounded-full text-sm font-medium backdrop-blur-sm">
             ✨ Revolutioniere dein Denken
           </span>
         </div>
         
         <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-light-900 mb-8 leading-tight">
-          <span class="bg-gradient-to-r from-light-900 to-accent-orange bg-clip-text text-transparent">
+          <span class="text-light-900">
             Break the loop.
           </span>
           <br>
-          <span class="text-light-800">
+          <span class="text-light-600">
             Regain clarity.
           </span>
         </h1>
         
         <p class="text-xl md:text-2xl text-light-600 mb-8 leading-relaxed max-w-2xl">
           Verwandle deine täglichen Gedanken in strukturierte Zukunftspläne. 
-          <span class="text-accent-orange font-medium">Eine App, ein Bildschirm, unendliche Klarheit.</span>
+          <span class="text-light-500 font-medium">Eine App, ein Bildschirm, unendliche Klarheit.</span>
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
           <div class="transform hover:scale-105 transition-transform duration-300">
             <AppStoreButton />
           </div>
-          <button class="group relative px-8 py-4 bg-transparent border-2 border-light-700/30 text-light-900 rounded-xl font-semibold hover:border-accent-orange/50 transition-all duration-300">
+          <button class="group relative px-8 py-4 bg-transparent border-2 border-dark-600/50 text-light-700 rounded-xl font-semibold hover:border-light-700/50 hover:text-light-600 transition-all duration-300">
             <span class="relative z-10">Mehr erfahren</span>
           </button>
         </div>
 
         <!-- Stats -->
-        <div class="grid grid-cols-3 gap-8 pt-8 border-t border-dark-700/50">
+        <div class="grid grid-cols-3 gap-8 pt-8 border-t border-dark-700/30">
           <div class="text-center">
-            <div class="text-3xl font-bold text-accent-orange mb-2">1</div>
+            <div class="text-3xl font-bold text-light-900 mb-2">1</div>
             <div class="text-sm text-light-600">Bildschirm</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold text-accent-blue mb-2">∞</div>
+            <div class="text-3xl font-bold text-light-700 mb-2">∞</div>
             <div class="text-sm text-light-600">Möglichkeiten</div>
           </div>
           <div class="text-center">
@@ -66,12 +66,12 @@ import AppStoreButton from './AppStoreButton.astro';
       <!-- Right Column - App Mockup -->
       <div class="flex justify-center lg:justify-end animate-slide-in-right">
         <div class="relative">
-          <!-- Simple floating elements -->
-          <div class="absolute -top-8 -left-8 w-12 h-12 bg-accent-orange/20 rounded-xl animate-float"></div>
-          <div class="absolute -bottom-8 -right-8 w-8 h-8 bg-accent-blue/20 rounded-lg animate-float" style="animation-delay: 1s;"></div>
+          <!-- Very subtle floating elements -->
+          <div class="absolute -top-8 -left-8 w-12 h-12 bg-light-900/10 rounded-xl animate-float"></div>
+          <div class="absolute -bottom-8 -right-8 w-8 h-8 bg-light-900/5 rounded-lg animate-float" style="animation-delay: 1s;"></div>
           
           <!-- Clean phone mockup -->
-          <div class="relative p-2 bg-gradient-to-br from-dark-700 to-dark-600 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+          <div class="relative p-2 bg-gradient-minimal rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
             <div class="bg-dark-900 rounded-2xl p-1">
               <img 
                 src="/app-mockup-new.png" 
@@ -79,8 +79,8 @@ import AppStoreButton from './AppStoreButton.astro';
                 class="w-80 h-auto rounded-2xl"
               />
             </div>
-            <!-- Subtle glow -->
-            <div class="absolute inset-0 bg-accent-orange/20 rounded-3xl blur-xl opacity-30"></div>
+            <!-- Very subtle glow -->
+            <div class="absolute inset-0 bg-light-900/5 rounded-3xl blur-xl opacity-30"></div>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@ import AppStoreButton from './AppStoreButton.astro';
   <!-- Scroll indicator -->
   <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
     <div class="w-6 h-10 border-2 border-light-700/30 rounded-full flex justify-center">
-      <div class="w-1 h-3 bg-accent-orange rounded-full mt-2 animate-pulse"></div>
+      <div class="w-1 h-3 bg-light-700 rounded-full mt-2 animate-pulse"></div>
     </div>
   </div>
 </section> 

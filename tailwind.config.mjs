@@ -22,9 +22,9 @@ export default {
           orange: '#FF6B35',
           'orange-light': '#FF8C69',
           'orange-dark': '#E55A2B',
-          blue: '#2563EB',
+          blue: '#3B82F6',
           'blue-light': '#60A5FA',
-          'blue-dark': '#1D4ED8',
+          'blue-dark': '#1E40AF',
           gray: '#6B7280',
           'gray-light': '#9CA3AF',
           'gray-dark': '#4B5563',
@@ -66,9 +66,9 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-hero': 'linear-gradient(135deg, #000000 0%, #1A1A1A 50%, #000000 100%)',
-        'gradient-orange': 'linear-gradient(135deg, #FF6B35 0%, #FF8C69 100%)',
-        'gradient-subtle': 'linear-gradient(135deg, #FF6B35 0%, #FFFFFF 100%)',
+        'gradient-hero': 'linear-gradient(135deg, #000000 0%, #0A0A0A 50%, #000000 100%)',
+        'gradient-subtle': 'linear-gradient(135deg, #1A1A1A 0%, #000000 100%)',
+        'gradient-minimal': 'linear-gradient(135deg, #2A2A2A 0%, #1A1A1A 100%)',
       },
       spacing: {
         '18': '4.5rem',
@@ -79,8 +79,8 @@ export default {
         xs: '2px',
       },
       boxShadow: {
-        'glow-orange': '0 0 30px rgba(255, 107, 53, 0.3)',
-        'glow-blue': '0 0 30px rgba(37, 99, 235, 0.3)',
+        'glow-subtle': '0 0 20px rgba(255, 255, 255, 0.1)',
+        'glow-white': '0 0 30px rgba(255, 255, 255, 0.15)',
       }
     },
   },
