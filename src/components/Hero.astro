@@ -66,21 +66,13 @@ import AppStoreButton from './AppStoreButton.astro';
       <!-- Right Column - App Mockup -->
       <div class="flex justify-center lg:justify-end animate-slide-in-right">
         <div class="relative">
-          <!-- Very subtle floating elements -->
-          <div class="absolute -top-8 -left-8 w-12 h-12 bg-light-900/10 rounded-xl animate-float"></div>
-          <div class="absolute -bottom-8 -right-8 w-8 h-8 bg-light-900/5 rounded-lg animate-float" style="animation-delay: 1s;"></div>
-          
-          <!-- Clean phone mockup -->
-          <div class="relative p-2 bg-gradient-minimal rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
-            <div class="bg-dark-900 rounded-2xl p-1">
-              <img 
-                src="/app-mockup-new.png" 
-                alt="LoopCut App Screenshot" 
-                class="w-80 h-auto rounded-2xl"
-              />
-            </div>
-            <!-- Very subtle glow -->
-            <div class="absolute inset-0 bg-light-900/5 rounded-3xl blur-xl opacity-30"></div>
+          <!-- Clean phone mockup without floating elements -->
+          <div class="relative transform hover:scale-105 transition-transform duration-500">
+            <img 
+              src="/app-mockup-new.png" 
+              alt="LoopCut App Screenshot" 
+              class="w-80 h-auto rounded-3xl shadow-2xl"
+            />
           </div>
         </div>
       </div>
