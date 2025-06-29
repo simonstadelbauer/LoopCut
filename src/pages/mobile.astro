@@ -1,0 +1,309 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="LoopCut - The Mental Clarity App">
+  <!-- Mobile-First Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm">
+    <div class="max-w-sm mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img src="/logo-white.png" alt="LoopCut" class="w-6 h-6" />
+        <span class="text-white font-bold text-lg">LoopCut</span>
+      </div>
+      <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+        <span class="text-white text-xs">📱</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="bg-gradient-to-b from-gray-900 to-black text-white">
+    <!-- Hero - Mobile App Style -->
+    <section class="pt-20 pb-12 px-4">
+      <div class="max-w-sm mx-auto text-center space-y-8">
+        <!-- App Icon -->
+        <div class="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-600 rounded-3xl mx-auto flex items-center justify-center shadow-2xl">
+          <span class="text-white text-4xl font-bold">ℓ</span>
+        </div>
+        
+        <div class="space-y-4">
+          <h1 class="text-4xl font-black leading-tight">
+            <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              Mental Clarity
+            </span>
+            <br>
+            <span class="text-white">in Your Pocket</span>
+          </h1>
+          
+          <p class="text-gray-300 text-lg leading-relaxed">
+            Transform scattered thoughts into clear action plans. 
+            <span class="text-blue-400">AI-powered</span> • <span class="text-purple-400">One screen</span> • <span class="text-green-400">Instant results</span>
+          </p>
+        </div>
+        
+        <!-- Download Button -->
+        <div class="bg-white text-black rounded-2xl p-6 shadow-2xl">
+          <div class="flex items-center space-x-4">
+            <img src="/Apple_logo_black.svg" alt="Apple" class="w-8 h-8" />
+            <div class="text-left">
+              <div class="text-sm text-gray-600">Download on the</div>
+              <div class="text-xl font-bold">App Store</div>
+            </div>
+          </div>
+          <div class="mt-4 text-center">
+            <div class="text-sm text-gray-500">Free • No Ads • Privacy-First</div>
+          </div>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-3 gap-4 pt-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold text-blue-400">4.9★</div>
+            <div class="text-xs text-gray-400">Rating</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-purple-400">10K+</div>
+            <div class="text-xs text-gray-400">Downloads</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-green-400">2MB</div>
+            <div class="text-xs text-gray-400">Size</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Screenshots Carousel -->
+    <section class="py-12 px-4">
+      <div class="max-w-sm mx-auto">
+        <h2 class="text-2xl font-bold text-center mb-8">
+          <span class="text-white">See it in</span> <span class="text-blue-400">action</span>
+        </h2>
+        
+        <!-- Main Screenshot -->
+        <div class="relative mb-6">
+          <div class="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl p-4">
+            <img src="/app-mockup-new.png" alt="LoopCut App Interface" class="w-full rounded-2xl shadow-2xl" />
+          </div>
+          
+          <!-- Floating Feature Tags -->
+          <div class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-bold">
+            AI Analysis
+          </div>
+          <div class="absolute top-1/2 -left-4 bg-purple-500 text-white text-xs px-3 py-1 rounded-full font-bold">
+            One Screen
+          </div>
+          <div class="absolute -bottom-2 right-8 bg-green-500 text-white text-xs px-3 py-1 rounded-full font-bold">
+            Instant Plans
+          </div>
+        </div>
+        
+        <!-- Feature Highlights -->
+        <div class="space-y-4">
+          <div class="bg-gray-800/50 rounded-2xl p-4 border border-gray-700">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center">
+                <span class="text-white text-lg">🧠</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white">AI Journal Analysis</h3>
+                <p class="text-gray-400 text-sm">Smart insights from your daily thoughts</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-gray-800/50 rounded-2xl p-4 border border-gray-700">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 bg-purple-500 rounded-xl flex items-center justify-center">
+                <span class="text-white text-lg">🎯</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white">Goal Tracking</h3>
+                <p class="text-gray-400 text-sm">Turn thoughts into actionable goals</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-gray-800/50 rounded-2xl p-4 border border-gray-700">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center">
+                <span class="text-white text-lg">💬</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white">CBT Conversations</h3>
+                <p class="text-gray-400 text-sm">Therapeutic chat when you need it</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works - Mobile Style -->
+    <section class="py-12 px-4 bg-gradient-to-b from-black to-gray-900">
+      <div class="max-w-sm mx-auto">
+        <h2 class="text-2xl font-bold text-center mb-8 text-white">
+          Simple. <span class="text-blue-400">Powerful.</span> <span class="text-purple-400">Effective.</span>
+        </h2>
+        
+        <div class="space-y-6">
+          <!-- Step 1 -->
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-sm">
+              1
+            </div>
+            <div>
+              <h3 class="font-bold text-white mb-1">Write Your Thoughts</h3>
+              <p class="text-gray-400 text-sm">Quick journaling on one clean screen</p>
+            </div>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center font-bold text-white text-sm">
+              2
+            </div>
+            <div>
+              <h3 class="font-bold text-white mb-1">AI Analyzes</h3>
+              <p class="text-gray-400 text-sm">Smart patterns and insights emerge</p>
+            </div>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center font-bold text-white text-sm">
+              3
+            </div>
+            <div>
+              <h3 class="font-bold text-white mb-1">Get Action Plans</h3>
+              <p class="text-gray-400 text-sm">Concrete next steps for your goals</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Demo Video Placeholder -->
+        <div class="mt-8 bg-gray-800 rounded-2xl p-8 text-center border border-gray-700">
+          <div class="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="text-white text-2xl">▶️</span>
+          </div>
+          <h3 class="font-bold text-white mb-2">Watch 30-sec Demo</h3>
+          <p class="text-gray-400 text-sm">See LoopCut in action</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof - Mobile -->
+    <section class="py-12 px-4">
+      <div class="max-w-sm mx-auto">
+        <h2 class="text-2xl font-bold text-center mb-8 text-white">
+          <span class="text-yellow-400">★★★★★</span> Loved by users
+        </h2>
+        
+        <div class="space-y-4">
+          <div class="bg-gray-800/50 rounded-2xl p-4 border border-gray-700">
+            <div class="flex items-center space-x-3 mb-3">
+              <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                <span class="text-white text-sm">M</span>
+              </div>
+              <div>
+                <div class="font-bold text-white text-sm">Maria K.</div>
+                <div class="text-yellow-400 text-xs">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-gray-300 text-sm italic">
+              "Finally an app that actually helps organize my thoughts. The AI is scary good!"
+            </p>
+          </div>
+          
+          <div class="bg-gray-800/50 rounded-2xl p-4 border border-gray-700">
+            <div class="flex items-center space-x-3 mb-3">
+              <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                <span class="text-white text-sm">T</span>
+              </div>
+              <div>
+                <div class="font-bold text-white text-sm">Tom R.</div>
+                <div class="text-yellow-400 text-xs">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-gray-300 text-sm italic">
+              "Replaced my therapist app. This is so much more practical and immediate."
+            </p>
+          </div>
+        </div>
+        
+        <!-- Stats -->
+        <div class="mt-8 text-center">
+          <div class="text-3xl font-bold text-white mb-2">10,247</div>
+          <div class="text-gray-400 text-sm">Happy users and counting</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA - Mobile -->
+    <section class="py-12 px-4 bg-gradient-to-t from-blue-900/20 to-transparent">
+      <div class="max-w-sm mx-auto text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          Ready to clear your mind?
+        </h2>
+        <p class="text-gray-300 mb-8">
+          Join thousands who've already transformed their thinking
+        </p>
+        
+        <!-- Big Download Button -->
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-6 shadow-2xl mb-6">
+          <div class="flex items-center justify-center space-x-4">
+            <img src="/Apple_logo_black.svg" alt="Apple" class="w-8 h-8 filter invert" />
+            <div class="text-left">
+              <div class="text-sm text-blue-100">Download free on</div>
+              <div class="text-xl font-bold text-white">App Store</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-gray-400 text-sm">
+          ✓ Free forever ✓ No ads ✓ Privacy-first ✓ Works offline
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile Footer -->
+  <footer class="py-8 px-4 bg-black">
+    <div class="max-w-sm mx-auto text-center">
+      <div class="flex items-center justify-center space-x-2 mb-4">
+        <img src="/logo-white.png" alt="LoopCut" class="w-6 h-6" />
+        <span class="text-white font-bold">LoopCut</span>
+      </div>
+      <div class="text-gray-400 text-sm mb-4">
+        Mental clarity in your pocket
+      </div>
+      <div class="text-gray-500 text-xs">
+        © 2024 LoopCut • Made with ❤️ for mobile
+      </div>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  /* Mobile-first responsive design */
+  @media (min-width: 640px) {
+    body {
+      background: linear-gradient(to bottom, #1a1a1a, #000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    main {
+      max-width: 375px;
+      margin: 0 auto;
+      box-shadow: 0 0 50px rgba(0,0,0,0.5);
+      border-radius: 30px;
+      overflow: hidden;
+    }
+  }
+</style> 
