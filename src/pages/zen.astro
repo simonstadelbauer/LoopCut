@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="LoopCut - Ruhe im Gedankensturm">
+  <!-- Zen Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-light text-gray-900">LoopCut</div>
+      <div class="w-12 h-8 bg-gray-900 rounded-full flex items-center justify-center">
+        <span class="text-white text-xs font-medium">App</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="bg-white text-gray-900">
+    <!-- Hero - Minimalist -->
+    <section class="min-h-screen flex items-center justify-center px-6">
+      <div class="max-w-2xl text-center space-y-12">
+        <div class="space-y-8">
+          <h1 class="text-6xl md:text-8xl font-extralight leading-none tracking-tight">
+            Ruhe
+          </h1>
+          <p class="text-xl md:text-2xl font-light text-gray-600 max-w-lg mx-auto leading-relaxed">
+            im Gedankensturm
+          </p>
+        </div>
+        
+        <div class="w-px h-24 bg-gray-300 mx-auto"></div>
+        
+        <div class="space-y-6">
+          <p class="text-lg font-light text-gray-700 max-w-md mx-auto">
+            Deine Gedanken. Strukturiert. Klar.
+          </p>
+          <div class="w-12 h-8 bg-gray-900 rounded-full mx-auto flex items-center justify-center cursor-pointer hover:bg-gray-800 transition-colors">
+            <span class="text-white text-xs font-medium">↓</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem - Zen Style -->
+    <section class="py-32 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+          <div class="space-y-8">
+            <div class="w-1 h-16 bg-gray-900"></div>
+            <h2 class="text-4xl md:text-5xl font-extralight leading-tight">
+              Gedanken<br>
+              kreisen
+            </h2>
+            <p class="text-lg font-light text-gray-600 leading-relaxed">
+              Endlose Schleifen. Keine Klarheit. 
+              Der Geist findet keine Ruhe.
+            </p>
+          </div>
+          <div class="relative">
+            <div class="w-64 h-64 mx-auto">
+              <!-- Circular visualization of chaotic thoughts -->
+              <div class="absolute inset-0 border border-gray-300 rounded-full animate-spin" style="animation-duration: 20s;"></div>
+              <div class="absolute inset-4 border border-gray-400 rounded-full animate-spin" style="animation-duration: 15s; animation-direction: reverse;"></div>
+              <div class="absolute inset-8 border border-gray-500 rounded-full animate-spin" style="animation-duration: 10s;"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-gray-600 font-light">?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution - Zen Style -->
+    <section class="py-32 px-6 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+          <div class="relative order-2 md:order-1">
+            <div class="w-64 h-64 mx-auto">
+              <!-- Clean, organized visualization -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-48 h-48 border border-gray-300 rounded-lg flex items-center justify-center">
+                  <img src="/app-mockup-new.png" alt="LoopCut App" class="w-32 h-auto rounded-lg shadow-sm" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-8 order-1 md:order-2">
+            <div class="w-1 h-16 bg-gray-900"></div>
+            <h2 class="text-4xl md:text-5xl font-extralight leading-tight">
+              Klarheit<br>
+              entsteht
+            </h2>
+            <p class="text-lg font-light text-gray-600 leading-relaxed">
+              Ein Bildschirm. Struktur. 
+              KI bringt Ordnung ins Chaos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download - Zen Style -->
+    <section class="py-32 px-6">
+      <div class="max-w-2xl mx-auto text-center space-y-12">
+        <div class="space-y-8">
+          <h2 class="text-5xl md:text-6xl font-extralight">
+            Beginne
+          </h2>
+          <p class="text-xl font-light text-gray-600">
+            heute
+          </p>
+        </div>
+        
+        <div class="w-px h-16 bg-gray-300 mx-auto"></div>
+        
+        <div class="inline-flex items-center space-x-4 bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors cursor-pointer">
+          <img src="/Apple_logo_black.svg" alt="Apple" class="w-5 h-5 filter invert" />
+          <div class="text-left">
+            <div class="text-xs font-light opacity-75">Laden im</div>
+            <div class="text-sm font-medium">App Store</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Zen Footer -->
+  <footer class="py-16 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="space-y-6">
+        <div class="text-sm font-light text-gray-500">
+          LoopCut © 2024
+        </div>
+        <div class="w-12 h-px bg-gray-300 mx-auto"></div>
+        <div class="text-xs font-light text-gray-400">
+          Made with intention
+        </div>
+      </div>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 300;
+  }
+</style> 
